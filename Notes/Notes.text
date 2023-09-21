@@ -1,0 +1,294 @@
+What is jQuery:-
+ jQuery is a lightweight, "write less, do more", JavaScript library.
+ The purpose of jQuery is to make it much easier to use JavaScript on your website.
+ jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
+ jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+
+The jQuery library contains the following features:-
+ .HTML/DOM manipulation
+ .CSS manipulation
+ .HTML event methods
+ .Effects and animations
+ .AJAX
+ .Utilities
+
+Tip: In addition, jQuery has plugins for almost any task out there.
+
+Why jQuery:-
+There are lots of other JavaScript libraries out there, but jQuery is probably the most popular, and also the most extendable.
+Many of the biggest companies on the Web use jQuery, such as:-
+ .Google
+ .Microsoft
+ .IBM
+ .Netflix
+
+ 3 Steps to implement jQuery in HTML
+ 1. download jquery.js file
+ 2. include jquery.js file in html file
+ 3. do jquery code in <script> tag
+
+CDN - Content Delivery Network
+
+jQuery Syntax :-
+The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s).
+
+Basic syntax is: $(selector).action()
+
+   .A $ sign to define/access jQuery
+   .A (selector) to "query (or find)" HTML elements
+   .A jQuery action() to be performed on the element(s)
+Examples:
+
+$(this).hide() - hides the current element.
+
+$("p").hide() - hides all <p> elements.
+
+$(".test").hide() - hides all elements with class="test".
+
+$("#test").hide() - hides the element with id="test".
+
+jb bhi hum jquery ka code likhye to ye syntex yaad rhe
+
+<script>
+    $(document).ready(function() {
+
+        hum hamesh jquery ka code yahi likhenge
+
+    });
+</csript>
+
+The Document Ready Event :-
+You might have noticed that all jQuery methods in our examples, are inside a document ready event:
+
+ $(document).ready(function(){
+
+    // jQuery methods go here...
+
+ });
+This is to prevent any jQuery code from running before the document is finished loading (is ready).
+
+It is good practice to wait for the document to be fully loaded and ready before working with it. This also allows you to have your JavaScript code before the body of your document, in the head section.
+
+Here are some examples of actions that can fail if methods are run before the document is fully loaded:-
+ .Trying to hide an element that is not created yet
+ .Trying to get the size of an image that is not loaded yet
+
+Tip: The jQuery team has also created an even shorter method for the document ready event:
+
+ $(function(){
+
+  // jQuery methods go here...
+
+});
+Use the syntax you prefer. We think that the document ready event is easier to understand when reading the code.
+
+Targeting DOM Element with ID, Class & Tag
+ Select by id : $("#idName")
+ Select by Class Name : $(".className")
+ Select by Tag Name : $("tagName") like this  $("p")
+
+Advance Selectors :-
+  $("*")
+  $("ul li") parent (ul) and child (li) aise bhi target kr skte hain
+  $(".abc, .xyz") yha ap multiple classes lga skte hain
+  $("h1, div, p") aise bhi multipla lga skte hain
+  $("p:first") aise hum pure page me jo pahela p hoga use target krta hain
+  $("p:last") aise hum pure page me jo last p hoga use target krta hain
+  $("li:even") ye even ko target krta hain
+  $("li:odd") ye odd ko target krta hain
+
+
+Mouse Events:-
+ . click()
+ . dblclick()
+ . contextmenu()
+ . mouseenter()
+ . mouseleave()
+
+Keyboard Events:-
+ . Keypress()
+ . Keydown()
+ . keyup()
+
+Form Events:-
+ . focus() ismka mtlb ye h ki jb bhi me input me focus krunga to ye focus ho jayega
+ . blur()  ye focus ka ulta hota jaise hum wha se focus hatayenge waha blur ho jayega
+ . change() ye basicali hum select box ke sth lagate hain jb option button se koi bhi value change krna ho tb
+ . select() ye use krte hain jb bhi input box me kuch likha hua hota h use trigar krne ke liye
+ . submit() jb form me submit button pr click krenge to ye event trigar ho jayega
+
+Window Events:-
+  . load() ye remove ho gye hain version 3.0 se
+  . unload() ye remove ho gye hain version 3.0 se
+  . resize() 
+  . scroll()
+
+Get Methods:-
+  . text()
+  . html()
+  . attr() means attribute
+  . val()
+
+Set Methods:-
+  . text()
+  . html()
+  . attr()
+  . val()
+
+CSS Class Methods:-
+  . addClass()
+  . removeClass()
+  . toggleClass()
+
+CSS() Method:-
+=> is method se hum inline styling krte hain jQuery me
+
+on() & off() Method:-
+on() Method:- isse hum ek sath multipla event lga skte hain
+
+  $('#abc').on({
+    click:function(){
+
+    },
+    mouseenter:function(){
+
+    }
+
+  });
+
+off() method:- isse hum multipla event ko remove kr skte hain
+
+Append Method:- append() is method se hum apne text ko saare text ke last me daal skte hain
+Prepend Method:- prepend() is method se hum text ko saare text ke top pr text likhane ke liye is method ka use krte hain
+
+After() And Before():- ye dono method append and prepend jaise hi work krte h bs ye jise hum target krte use complete hone ke baad ya usse pehale text ko print krte hain
+
+Empty And Remove Method:- 
+empty():- is method se hum target element ke text ko empty kr skte hain
+remove():- is method se hum pura target element ko hi remove kr skte hain like div , p , and aur koi bhi tag ho
+
+AppendTo And PrependTo:- ye dono append and prepend method jiase hi work krta hain 
+bs appendTo() me $(content).appendTo(selector) hota hain usi jagah append me $(selector).appendTo(content) ye hota hain
+same isi tahar prepend and PrependTo use krte hain.
+
+Clone() Method:- is method se hum ek element se dusre element me copy kr skte hain.
+
+ReplaceWith and ReplaceAll:- 
+replaceWith():- isse individual replace krte hain
+replaceAll():- isse saare ko replace krte hain.
+
+Wrap And Unwrap Method:-
+
+WrapAll And WrapInner:-
+
+Height And Width Methods:-
+  . width()
+  . height()
+  . innerWidth()
+  . innerHeight()
+  . outerWidth()
+  . outHeight()
+  . outerWidth(true)
+  . outerHeight(true)
+
+Position() And Offset():-
+Position:- Relative to its Parent element
+Offset:- Relative to the Document
+
+in dono se do value get our set kr skte hai 1.top and 2.left
+
+scrollTop() And scrollLeft():-
+
+hasClass():- ye bs true ya false deta hain agar ise class mil jayega to true nhi to false return krta hain
+
+Effect : Hide & Show:- 
+toggle : ye bhi same work krega jaise hide and show krta hain
+
+Effect : Fade Methods:-
+  . fadeIn()
+  . fadeOut()
+  . fadeToggle()
+  . fadeTo()
+
+fadeIn and fadeOut ye dono hide and show jaise km krte hain and fadeToggle bhi toggle jaise km krte hain.
+
+fadeTo Method :- $(selector).fadeTo(speed,opacity,callback function);
+speed - slow, fast, milisecond me value de skte hain
+opacity - isme transparency de skte aur iski value between 0 and 1 hoti hain
+
+Effect : Slide Methods:-
+  . slideDown()
+  . slideUp()
+  . slideToggle()
+
+Animate Method:- isko likhane ka tarika $(selector).animate({parameters}, speed, callback function);
+{parameters} - iske undar Almost any css property yha likh skte hain bs color aur background-color ko chhod ke
+jo css property likhenge uska tarika - css property should be in Camel Case like - paddingLeft na ki padding-left
+
+Stop() Method:-
+
+Chaining Method:- $(selector).method();
+Example:-
+$('#box').css('color', 'red');
+$('#box').slideUp();
+$('#box').slideDown();
+
+Method Chaining - $(selector).css('color', 'red').slideUp().slideDown();
+
+Ancestors Methods:- is method me hum parent, grandparent and great-grandparent ko target krte hain
+   . parent()
+   . parents()
+   . parentsUntil()
+   . closest()
+   . offsetParent()
+
+Descendants Methods:- is method me hum child, grandchild and great-grandchild ko target krte hain
+   . children()
+   . find()
+
+Siblings Methods:- is method me inka parent same hota hain
+   . siblings()
+   . next()
+   . nextAll()
+   . nextUntil()
+   . prev()
+   . prevAll()
+   . prevUntil()
+
+Filtering Methods:-
+   . first()
+   . last()
+   . eq()
+   . filter()
+   . not()
+   . slice()
+
+has() & is() Method:-
+is() is method ko hum if ke undar use krte hain aur ye do value return krta h true ya false.
+
+each() Method:- le loops ki tahar km krta hain ek dum same loop jaisa km nhi krta hain.
+
+pageX & pageY:-
+event.pageX and event.pageY ye do property hota hain
+
+Event.type:-
+
+Event.which:-
+
+Event.target:-
+event.target.nodeName :- isse hum target krte hain ki ap kis element ko target kr rhe hain phit us element ka naam return kr deta hain
+paticular elements ka naam janne ke liye hu event.target me nodeName bhi likhate hain
+
+Event.preventDefault:-
+
+stopPropagation():-
+
+Event.data:-
+
+Plugins Introduction:-
+
+
+
+Complete Jquery Playlist - https://www.youtube.com/playlist?list=PL0b6OzIxLPbzSyiC0PFaqeabe1aGhfrbW
+
+Complete Jquery Documentation link - https://www.w3schools.com/jquery/

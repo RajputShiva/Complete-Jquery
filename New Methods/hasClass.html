@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #box {
+            border: 1px solid red;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Classes Methods</h1>
+
+    <div id="box" class="test">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Voluptatem, quos!</p>
+    </div>
+     <br>
+     <button id="hasclassBtn">hasClass</button>
+    <script>
+     $(document).ready(function() {
+       $('#hasclassBtn').click(function() {
+        //  console.log( $('#box').hasClass('test'));
+
+        var x = $('#box').hasClass('test');
+
+        if(x == true){
+            console.log("Yes");
+        }else{
+            console.log("No");
+        }
+       });
+    });
+    </script>
+</body>
+</html>

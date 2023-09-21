@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        #box {
+            border: 1px solid red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="text">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quos!</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+         $('#box').click(function() {
+            $('#box').css('background-color','green');
+            // var a = $('#box').html();
+            // console.log(a);
+         });
+
+         $('#box').dblclick(function() {
+            $('#box').css('background-color','orange');
+         });
+
+         $('#box').contextmenu(function() {
+            $('#box').css('background-color','blue');
+         });
+
+         $('#box').mouseenter(function() {
+            $('#box').css('background-color','yellow');
+         });
+
+         $('#box').mouseleave(function() {
+            $('#box').css('background-color','pink');
+         });
+    });
+    </script>
+</body>
+</html>

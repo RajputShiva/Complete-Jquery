@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #first {
+            margin: 10px;
+            padding: 30px;
+            border: 2px solid black;
+            background: lightgreen;
+        }
+        #second {
+            margin: 10px;
+            padding: 30px;
+            border: 2px solid black;
+            background: pink;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>jQuery Methods</h1>
+
+    <div id="first">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus impedit asperiores similique neque quaerat! Itaque distinctio perspiciatis ratione qui ullam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus impedit asperiores similique neque quaerat! Itaque distinctio perspiciatis ratione qui ullam?</p>
+    </div>
+    <ul>
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+    <div id="second">
+        <p class="test">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius ipsum ab nulla officiis sunt beatae provident praesentium mollitia accusamus natus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus impedit asperiores similique neque quaerat! Itaque distinctio perspiciatis ratione qui ullam?</p>
+    </div>
+  <script>
+    $(document).ready(function() {
+    //   $('p').first().css('background','gold')
+
+    // $('#second p').first().css('background','gold')
+
+    // $('p').last().css('background','gold')
+
+    // $('ul li').last().css('background','gold')
+
+    // $('ul li').eq(2).css('background','gold')
+
+    // $('p').filter('.text').css('background','gold')
+
+    // $('p').not('.test').css('background','gold')
+
+    // $('ul li').slice(3).css('background','gold')
+    $('ul li').slice(1,3).css('background','gold')
+  });
+  </script>
+</body>
+</html>

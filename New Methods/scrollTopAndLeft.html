@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+      body {
+        font-family: Arial;
+      }
+      #box {
+        width: 230px;
+        height: 80px;
+        border: 2px solid black;
+        text-align: center;
+        background: lightgreen;
+        padding: 10px;
+        position: fixed;
+        left: 20px;
+        bottom: 30px;
+      }
+    </style>
+  </head>
+  <body style="width: 1200px;">
+    <h1>jQuery scrollTop & scrollLeft Method</h1>
+    <button id="scrolltopBtn">scrollTop</button>
+    <button id="scrollleftBtn">scrollLeft</button>
+    <br /><br />
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
+    consequuntur, est officiis quod aspernatur possimus. Possimus esse
+    architecto nostrum exercitationem temporibus quasi, odit dolorum iste maxime
+    debitis in doloremque nesciunt aperiam asperiores dolor magnam vitae earum
+    dignissimos eius reprehenderit est consectetur. Commodi vero quis est
+    veritatis accusantium ipsum aspernatur ducimus doloremque, totam, placeat
+    quasi tenetur maiores ex nulla sequi velit necessitatibus recusandae illo
+    nam. Inventore quidem praesentium saepe, nostrum minima harum,
+    exercitationem asperiores, ab iusto aut cum rem quaerat officiis? Ipsum hic
+    quis, cumque dolorum odit quasi iure, perferendis beatae debitis numquam
+    eligendi dicta nam molestias iusto quam. Praesentium, labore nobis! Maxime
+    adipisci hic sit alias ipsa tempore recusandae omnis nulla in consectetur,
+    accusantium aspernatur asperiores laborum est autem quidem facere provident
+    impedit voluptatum dolorum eveniet, rerum et deserunt fugiat. Amet
+    aspernatur, ad exercitationem dolorum cum eligendi quia, quaerat, modi ab
+    dolor harum iste illo mollitia accusantium rerum sunt alias iusto corrupti
+    tenetur facere nulla adipisci itaque fugiat esse? Laboriosam, expedita
+    eveniet. Quo soluta adipisci cum vitae et quaerat minus aliquid laudantium
+    enim praesentium incidunt, corporis commodi, ipsa facilis. Error tempore
+    maxime rerum commodi aspernatur natus mollitia, qui iste dignissimos
+    repudiandae ullam omnis eos, exercitationem temporibus tempora ab illum
+    facere!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
+    consequuntur, est officiis quod aspernatur possimus. Possimus esse
+    architecto nostrum exercitationem temporibus quasi, odit dolorum iste maxime
+    debitis in doloremque nesciunt aperiam asperiores dolor magnam vitae earum
+    dignissimos eius reprehenderit est consectetur. Commodi vero quis est
+    veritatis accusantium ipsum aspernatur ducimus doloremque, totam, placeat
+    quasi tenetur maiores ex nulla sequi velit necessitatibus recusandae illo
+    nam. Inventore quidem praesentium saepe, nostrum minima harum,
+    exercitationem asperiores, ab iusto aut cum rem quaerat officiis? Ipsum hic
+    quis, cumque dolorum odit quasi iure, perferendis beatae debitis numquam
+    eligendi dicta nam molestias iusto quam. Praesentium, labore nobis! Maxime
+    adipisci hic sit alias ipsa tempore recusandae omnis nulla in consectetur,
+    accusantium aspernatur asperiores laborum est autem quidem facere provident
+    impedit voluptatum dolorum eveniet, rerum et deserunt fugiat. Amet
+    aspernatur, ad exercitationem dolorum cum eligendi quia, quaerat, modi ab
+    dolor harum iste illo mollitia accusantium rerum sunt alias iusto corrupti
+    tenetur facere nulla adipisci itaque fugiat esse? Laboriosam, expedita
+    eveniet. Quo soluta adipisci cum vitae et quaerat minus aliquid laudantium
+    enim praesentium incidunt, corporis commodi, ipsa facilis. Error tempore
+    maxime rerum commodi aspernatur natus mollitia, qui iste dignissimos
+    repudiandae ullam omnis eos, exercitationem temporibus tempora ab illum
+    facere!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
+    consequuntur, est officiis quod aspernatur possimus. Possimus esse
+    architecto nostrum exercitationem temporibus quasi, odit dolorum iste maxime
+    debitis in doloremque nesciunt aperiam asperiores dolor magnam vitae earum
+    dignissimos eius reprehenderit est consectetur. Commodi vero quis est
+    veritatis accusantium ipsum aspernatur ducimus doloremque, totam, placeat
+    quasi tenetur maiores ex nulla sequi velit necessitatibus recusandae illo
+    nam. Inventore quidem praesentium saepe, nostrum minima harum,
+    exercitationem asperiores, ab iusto aut cum rem quaerat officiis? Ipsum hic
+    quis, cumque dolorum odit quasi iure, perferendis beatae debitis numquam
+    eligendi dicta nam molestias iusto quam. Praesentium, labore nobis! Maxime
+    adipisci hic sit alias ipsa tempore recusandae omnis nulla in consectetur,
+    accusantium aspernatur asperiores laborum est autem quidem facere provident
+    impedit voluptatum dolorum eveniet, rerum et deserunt fugiat. Amet
+    aspernatur, ad exercitationem dolorum cum eligendi quia, quaerat, modi ab
+    dolor harum iste illo mollitia accusantium rerum sunt alias iusto corrupti
+    tenetur facere nulla adipisci itaque fugiat esse? Laboriosam, expedita
+    eveniet. Quo soluta adipisci cum vitae et quaerat minus aliquid laudantium
+    enim praesentium incidunt, corporis commodi, ipsa facilis. Error tempore
+    maxime rerum commodi aspernatur natus mollitia, qui iste dignissimos
+    repudiandae ullam omnis eos, exercitationem temporibus tempora ab illum
+    facere!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
+    consequuntur, est officiis quod aspernatur possimus. Possimus esse
+    architecto nostrum exercitationem temporibus quasi, odit dolorum iste maxime
+    debitis in doloremque nesciunt aperiam asperiores dolor magnam vitae earum
+    dignissimos eius reprehenderit est consectetur. Commodi vero quis est
+    veritatis accusantium ipsum aspernatur ducimus doloremque, totam, placeat
+    quasi tenetur maiores ex nulla sequi velit necessitatibus recusandae illo
+    nam. Inventore quidem praesentium saepe, nostrum minima harum,
+    exercitationem asperiores, ab iusto aut cum rem quaerat officiis? Ipsum hic
+    quis, cumque dolorum odit quasi iure, perferendis beatae debitis numquam
+    eligendi dicta nam molestias iusto quam. Praesentium, labore nobis! Maxime
+    adipisci hic sit alias ipsa tempore recusandae omnis nulla in consectetur,
+    accusantium aspernatur asperiores laborum est autem quidem facere provident
+    impedit voluptatum dolorum eveniet, rerum et deserunt fugiat. Amet
+    aspernatur, ad exercitationem dolorum cum eligendi quia, quaerat, modi ab
+    dolor harum iste illo mollitia accusantium rerum sunt alias iusto corrupti
+    tenetur facere nulla adipisci itaque fugiat esse? Laboriosam, expedita
+    eveniet. Quo soluta adipisci cum vitae et quaerat minus aliquid laudantium
+    enim praesentium incidunt, corporis commodi, ipsa facilis. Error tempore
+    maxime rerum commodi aspernatur natus mollitia, qui iste dignissimos
+    repudiandae ullam omnis eos, exercitationem temporibus tempora ab illum
+    facere!
+
+    <div id="box"></div>
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function() {
+        $('#box').html("");
+        $('#box').append("Top : " + $(window).scrollTop());
+        $('#box').append("<br>Left : " + $(window).scrollLeft());
+
+
+        //    console.log($(window).scrollTop());
+        //    console.log($(window).scrollLeft()); 
+        });
+
+        $('#scrolltopBtn').click(function() {
+            $(window).scrollTop(200);
+        })
+
+        $('#scrollleftBtn').click(function() {
+            $(window).scrollLeft(100);
+        })
+      });
+    </script>
+  </body>
+</html>

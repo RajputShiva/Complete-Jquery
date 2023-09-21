@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #box {
+            border: 1px solid red;
+            text-align: center;
+            padding: 10px;
+            background: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Methods</h1>
+
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Voluptatem, quos!</p>
+    </div>
+    <br>
+    <button id="afterBtn">After</button>
+    <button id="beforeBtn">Before</button>
+  <script>
+    $(document).ready(function() {
+      $('#afterBtn').click(function() {
+        $('#box').after("<h3>After : Shiavji Singh</h3><p> this is just text.</p>")
+      });
+
+      $('#beforeBtn').click(function() {
+        $('#box').before("<h3>Before : Shiavji Singh</h3>")
+      });
+  });
+  </script>
+</body>
+</html>

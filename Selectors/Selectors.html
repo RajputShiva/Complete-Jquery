@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #box{
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="test">
+        <h2>Test Box 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, eius.</p>
+    </div>
+
+    <ul id="list">
+        <li>Orange</li>
+        <li class="test">Banana</li>
+        <li>Grapes</li>
+        <li class="test">Apple</li>
+        <li>Guava</li>
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+            // 'eq' means equation
+            // $('ul li:eq(2)').css("border","2px solid black");
+
+            // 'gt' means greater than
+            // $('ul li:gt(2)').css("border","2px solid black");
+
+            // 'lt' means lower than
+            // $('ul li:lt(3)').css("border","2px solid black");
+
+         $('li:last').css("border","2px solid black");
+         
+    });
+    </script>
+</body>
+</html>

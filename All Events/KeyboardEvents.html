@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #box {
+            border: 1px solid red;
+            text-align: center;
+            background: pink;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="text">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quos!</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+         $('body').keypress(function() {
+            // yha this bhi likh skte hain kyuki this corrent value ko hi pointout krta hain to me niche body ya this dono likh skte is function me
+            $(this).css('background-color','orange');
+         });
+
+         $('body').keyup(function() {
+            $(this).css('background-color','green');
+         });
+
+         $('body').keydown(function() {
+            // yha this bhi likh skte hain kyuki this corrent value ko hi pointout krta hain to me niche body ya this dono likh skte is function me
+            $(this).css('background-color','blue');
+         });
+
+    });
+    </script>
+</body>
+</html>

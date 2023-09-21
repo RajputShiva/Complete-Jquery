@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background: lime;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Classes Methods</h1>
+
+    <div id="box">
+        <p>Shivaji Singh</p>
+    </div>
+     <br>
+     <button id="animateBtn">Animate</button>
+     <button id="stopBtn">Stop</button>
+
+  <script>
+     $(document).ready(function() {
+      $('#animateBtn').click(function() {
+        $('#box').animate({left : '200px'}, 3000);
+        $('#box').animate({fontSize : '25px'}, 2000);
+    });
+
+    $('#stopBtn').click(function() {
+        // $('#box').stop();
+        // saari animation ko ek baar me rokane ke liye para me true likhate hain
+        // tusra true daalne pr finising point pr chala jata hain
+        $('#box').stop(true,true);
+    });
+  });
+  </script>
+</body>
+</html>

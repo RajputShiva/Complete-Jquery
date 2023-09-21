@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #result{
+            width: 400px;
+            height: 200px;
+            background-color: aqua;
+            border: 4px solid lightskyblue;
+        }
+        #box{
+            height: 50px;
+            width: 50px;
+            background-color: chocolate;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Classes Methods</h1>
+
+    <div id="result"></div>
+
+    <div id="box"></div>
+
+    <script>
+     $(document).ready(function() {
+        $(document).mousemove(function(shivaji) {
+            $('#result').text("X : " + shivaji.pageX + " Y : " + shivaji.pageY);
+
+
+            var x = shivaji.pageX;
+            var y = shivaji.pageY;
+
+            $('#box').offset({top : y, left : x});
+        });
+    });
+    </script>
+</body>
+</html>

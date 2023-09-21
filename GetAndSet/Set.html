@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #box {
+            border: 1px solid red;
+            text-align: center;
+            background: pink;
+            padding: 10px;
+        }
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="test">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Voluptatem, quos!</p>
+    </div>
+     <br>
+     <button id="clickbutton">Set Value</button>
+    <script>
+        $(document).ready(function() {
+        $('#clickbutton').click(function() {
+            // $('#box h2').text("Hello Shivaji Singh");
+
+            // $('#box p').text("this is new text.");
+
+            // $('#box h2').text("Hello <b>Shivaji</b> Singh");
+
+            // $('#box p').html("this <b>is new</b> text.");
+
+            $('#box h2').attr("class","red");
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #box {
+            border: 1px solid red;
+            text-align: center;
+            /* background: pink; */
+            padding: 10px;
+        }
+        .first{
+            background-color: tan;
+        }
+        .second{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Classes Methods</h1>
+
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Voluptatem, quos!</p>
+    </div>
+     <br>
+     <button id="addbutton">Add Class</button>
+     <button id="removebutton">Remove Class</button>
+     <button id="togglebutton">Toggle Class</button>
+    <script>
+        $(document).ready(function() {
+        $('#addbutton').click(function() {
+            $('#box').addClass("first second");
+            // $('#box,h1').addClass("second");
+        });
+            
+        $('#removebutton').click(function() {
+            $('#box').removeClass("second");
+        });
+
+        $('#togglebutton').click(function() {
+            $('#box').toggleClass("second");
+        });
+    });
+    </script>
+</body>
+</html>

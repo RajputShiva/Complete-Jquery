@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+    </style>
+</head>
+<body>
+    <h1>jQuery Methods</h1>
+
+    <ul>
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+
+  <script>
+    $(document).ready(function() {
+    //   $('li').each(function() {
+    //     console.log($(this).text());
+    //   });
+
+    // set bhi kr skte hain is method se
+    $('li').each(function() {
+        $(this).text("Hello");
+      });
+  });
+  </script>
+</body>
+</html>

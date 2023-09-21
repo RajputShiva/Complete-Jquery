@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background: lime;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Classes Methods</h1>
+
+    <div id="box">
+        <p>Shivaji Singh</p>
+    </div>
+     <br>
+     <button id="animateBtn">Animate</button>
+
+    <script>
+     $(document).ready(function() {
+      $('#animateBtn').click(function() {
+        // $('#box').animate({
+        //     left : '150px', 
+        //     // width : '200px'
+        //     // width : 'hide',
+        //     // width : 'toggle',
+        //     // width : '+=200px',
+        //     // upar ki saari property height pe bhi use kr skte hain
+        //     // fontSize : '25px',
+        //     // borderWidth : '5px'
+        // });
+        // aise bhi likh skte hain ise animation qube(kyube) bolte hain
+        // $('#box').animate({left : '150px'});
+        // $('#box').animate({left : '150px', fontSize : '25px'});
+        // speed property kaise use krte hain isme 
+
+        // $('#box').animate({left : '150px', fontSize : '25px'}, "slow");
+        // $('#box').animate({left : '150px', fontSize : '25px'}, "fast");
+        // $('#box').animate({left : '150px', fontSize : '25px'}, 3000);
+        // callback function bhi lga skte hain isme
+        $('#box').animate({left : '150px', fontSize : '25px'}, 3000, function() {
+            console.log("First Animation Completed");
+        }); 
+        $('#box').animate({top : '150px'});
+        $('#box').animate({width : '250px'});
+    });
+  });
+    </script>
+</body>
+</html>

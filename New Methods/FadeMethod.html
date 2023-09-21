@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #box {
+            border: 1px solid red;
+            background: lime;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Classes Methods</h1>
+
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Voluptatem, quos!</p>
+    </div>
+     <br>
+     <button id="fadeOutBtn">FadeOut</button>
+     <button id="fadeInBtn">FadeIn</button>
+     <button id="fadeToggleBtn">Fade Toggle</button>
+     <button id="fadeToBtn">Fade To</button>
+
+    <script>
+     $(document).ready(function() {
+      $('#fadeOutBtn').click(function() {
+        // $('#box').fadeOut();
+        // $('#box').fadeOut("slow");
+        // $('#box').fadeOut("fast");
+        // $('#box').fadeOut(3000);
+        // call back function bhi lga skte hain
+        $('#box').fadeOut(3000, function() {
+            console.log("Now it is Hidden");
+        });
+      });
+
+      $('#fadeInBtn').click(function() {
+        // $('#box').fadeIn();
+        // $('#box').fadeIn("slow");
+        // $('#box').fadeIn("fast");
+        $('#box').fadeIn(1000, function() {
+            console.log("Now it is Show");
+        });
+      });
+
+
+      $('#fadeToggleBtn').click(function() {
+        $('#box').fadeToggle(1000, function() {
+            console.log("Hey Toggle");
+        });
+      });
+
+
+      $('#fadeToBtn').click(function() {
+        $('#box').fadeTo(2000, 0.5, function() {
+            console.log("Hey Toggle");
+        });
+      });
+    });
+    </script>
+</body>
+</html>

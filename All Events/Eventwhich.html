@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #box{
+            width: 400px;
+            height: 200px;
+            background-color: aqua;
+            border: 4px solid lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Classes Methods</h1>
+
+    <div id="box"></div>
+    <br>
+    <input type="text" id="inputbox">
+    <br>
+    <h2></h2>
+
+    <script>
+     $(document).ready(function() {
+        $('#box').on("mouseover mouseout mousedown", function() {
+            $('h2').html(event.type + " : " + event.which);
+        });
+
+        $('#inputbox').on("keydown", function() {
+            $('h2').html(event.type + ": " + event.which);
+        });
+    });
+    </script>
+</body>
+</html>

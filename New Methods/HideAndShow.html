@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #box {
+            border: 1px solid red;
+            background: lime;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Classes Methods</h1>
+
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Voluptatem, quos!</p>
+    </div>
+     <br>
+     <button id="hideBtn">Hide</button>
+     <button id="showBtn">Show</button>
+     <button id="toggleBtn">Toggle</button>
+
+    <script>
+     $(document).ready(function() {
+    //    $('#hideBtn').click(function() {
+    //      $('#box').hide();
+    //    })
+
+    //    $('#showBtn').click(function() {
+    //      $('#box').show();
+    //    })
+
+    //    $('#hideBtn').click(function() {
+    //      $('#box p').hide();
+    //    })
+
+    //    $('#showBtn').click(function() {
+    //      $('#box p').show();
+    //    })
+
+
+       $('#hideBtn').click(function() {
+        //  $('#box').hide("slow");
+        // $('#box').hide("fast");
+        // milisecond me hoti hain kuch bhi daal skte jaise 1000,2000,3000 many more
+        // $('#box').hide(1000);
+        // isme call back function bhi daal skte ho
+        $('#box').hide(1000, function() {
+            console.log("Now it is hidden");
+         });
+       });
+
+       $('#showBtn').click(function() {
+        //  $('#box').show("slow");
+        // $('#box').show("fast");
+        $('#box').show(1000, function() {
+            console.log("Now it is show");
+         });
+       });
+
+
+       $('#toggleBtn').click(function() {
+        $('#box').toggle(1000, function() {
+            console.log("Hey Toggle");
+         });
+       });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #box {
+            border: 1px solid red;
+            text-align: center;
+            padding: 10px;
+            background: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Methods</h1>
+
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Voluptatem, quos!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, unde!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, unde!</p>
+    </div>
+    <br>
+    <button id="replaceBtn">Replace</button>
+  <script>
+    $(document).ready(function() {
+    $('#replaceBtn').click(function(){
+        // $('#box p:first').replaceWith("<h3>Shivaji Singh</h3>");
+
+        // $('#box p:nth-child(3)').replaceWith("<h3>Shivaji Singh</h3>");
+
+        // $('#box p:nth-child(3)').replaceWith("Shivaji Singh");
+
+        // replaceAll
+
+        // $("<h3>Shivaji Singh</h3>").replaceAll("#box p:first");
+
+        // $("Shivaji Singh").replaceAll("#box p:first");
+
+        $("<span>Shivaji Singh</span>").replaceAll("#box p:first");
+
+    });
+  });
+  </script>
+</body>
+</html>

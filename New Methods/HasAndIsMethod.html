@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #first {
+            margin: 10px;
+            padding: 30px;
+            border: 2px solid black;
+            background: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Methods</h1>
+
+    <div id="first">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus impedit asperiores similique neque quaerat! Itaque distinctio perspiciatis ratione qui ullam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus impedit asperiores similique neque quaerat! Itaque distinctio perspiciatis ratione qui ullam?</p>
+    </div>
+    <ul>
+        <li>Orange</li>
+        <li><span>Apple</span></li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+
+    <p class="test">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius ipsum ab nulla officiis sunt beatae provident praesentium mollitia accusamus natus.</p>
+    <p>Lorem ipsum dolor <span class="test">sit amet consectetur adipisicing elit</span>.</p>
+    
+  <script>
+    $(document).ready(function() {
+        // $('p').has('span').css('background','gold');
+   
+        // if($('p').parent().is('div')){
+        //     console.log($('p').parent().is('div'));
+        // }
+
+
+        $('p').click(function() {
+            if($('p').parent().is('div')){
+            $(this).css('background','gold');
+           }
+        });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #main-outer {
+            height: 500px;
+            width: 800px;
+            margin: 10px;
+            padding: 30px;
+            border: 2px solid black;
+            background: lightgreen;
+        }
+        #outer{
+            height: 400px;
+            width: 600px;
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid black;
+            background: aqua;
+        }
+        #inner{
+            height: 300px;
+            width: 400px;
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid black;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Methods</h1>
+
+    <div id="outer">
+      <h2>Outer</h2>
+        <div id="inner">
+        <h2>Inner</h2>
+        <div>A</div>
+        <div>B</div>
+        <div id="child-c">C</div>
+        <div>D</div>
+        <div>E</div>
+        </div>
+    </div>
+   </div>
+  <script>
+    $(document).ready(function() {
+       $('#child-c').siblings().css('background','red')
+  });
+  </script>
+</body>
+</html>

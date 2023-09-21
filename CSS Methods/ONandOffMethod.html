@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        body {font-family: Arial}
+        #box {
+            border: 1px solid red;
+            text-align: center;
+            padding: 10px;
+        }
+        .boxbg{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Methods</h1>
+
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Voluptatem, quos!</p>
+    </div>
+    <br>
+    <button>Remove Event</button>
+  <script>
+     $(document).ready(function() {
+        // single event lgaya tha
+    //   $('#box').on("click",function() {
+    //     $(this).css("background","orange");
+    //   });
+
+    //  agar do alag alag lines me event nahi likhna chahate hain ek hi line me do event likhane ka method
+    // $('#box').on("mouseover mouseout",function() {
+    //     $(this).toggleClass("boxbg");
+    //   });
+
+    // on ka use krke multiple event pr km kr skte hain
+    $("#box").on({
+     "click" : function(){
+        $(this).css("background","orange")
+     },
+     "mouseover" : function(){
+       $(this).css("background","pink");
+     },
+     "mouseout" : function(){
+        $(this).css("background","lightblue");
+     },
+
+    });
+
+    // off se hum event ko hata skte hain
+    $('button').click(function() {
+        $('#box').off("mouseover mouseout");
+    });
+    
+  });
+  </script>
+</body>
+</html>
